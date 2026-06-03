@@ -1,0 +1,15 @@
+*.class
+*.log
+*.jar
+*.war
+*.nar
+*.zip
+*.tar.gz
+.idea/
+*.iml
+.gradle/
+build/
+target/
+out/
+logs/
+application-local.yml

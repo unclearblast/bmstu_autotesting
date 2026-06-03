@@ -1,0 +1,54 @@
+satellite-constellation-system/
+├── .gitignore
+├── build.gradle.kts
+├── settings.gradle.kts
+├── docker-compose.yml
+├── README.md
+├── space-operation-center/
+│   ├── build.gradle.kts
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/example/spacecenter/
+│       │   │   ├── SpaceOperationCenterApplication.java
+│       │   │   ├── controller/
+│       │   │   │   └── SatelliteController.java
+│       │   │   ├── service/
+│       │   │   │   ├── SatelliteService.java
+│       │   │   │   └── OutboxScheduler.java
+│       │   │   ├── domain/
+│       │   │   │   ├── satellite/
+│       │   │   │   │   └── Satellite.java
+│       │   │   │   └── outbox/
+│       │   │   │       └── Outbox.java
+│       │   │   ├── dto/
+│       │   │   │   └── SatelliteEvent.java
+│       │   │   └── repository/
+│       │   │       ├── SatelliteRepository.java
+│       │   │       └── OutboxRepository.java
+│       │   └── resources/
+│       │       ├── application.yml
+│       │       └── schema.sql
+├── telemetry-service/
+│   ├── build.gradle.kts
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/example/telemetry/
+│       │   │   ├── TelemetryApplication.java
+│       │   │   ├── dto/
+│       │   │   │   └── SatelliteEvent.java
+│       │   │   ├── domain/
+│       │   │   │   └── inbox/
+│       │   │   │       └── Inbox.java
+│       │   │   ├── repository/
+│       │   │   │   └── InboxRepository.java
+│       │   │   ├── listener/
+│       │   │   │   └── SatelliteEventListener.java
+│       │   │   └── service/
+│       │   │       └── SatelliteStorageService.java
+│       │   └── resources/
+│       │       ├── application.yml
+│       │       └── schema.sql
+└── load-tests/
+    ├── load-test.js
+    └── reports/
+        └── report.html   # пример отчёта (фактический будет сгенерирован при запуске)
